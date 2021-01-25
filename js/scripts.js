@@ -51,6 +51,7 @@ $(document).ready(function() {
     const inputtedPhoneNumber = $("input#new-phone-number").val();
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
-    console.log(new Contact("John", "Smith", "5035551234"));
   });
+  const myContact = new Contact("John", "Smith", "5035551234")
+  console.log(myContact.fullName())
 });
