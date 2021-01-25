@@ -54,6 +54,7 @@ $(document).ready(function() {
   });
   let myContact = new Contact("John", "Smith", "5035551234")
   addressBook.addContact(myContact)
-  console.log(addressBook.findContact(1))
+  console.log(addressBook.deleteContact(1))
+  console.log(addressBook)
 
 });
