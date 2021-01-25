@@ -11,21 +11,35 @@ This app is designed to use showcase constructors and prototype methods to manip
 * * *
 ## Specs
 ```js
-Describe: `Contact();`
+Describe: Contact();
 Test: "It will produce a new contact object based on user-inputs: First Name, Last Name, Phone Number"
 Expect(Contact("John", "Smith", "5035551234").toEqual({firstName: "John", lastName: "Smith", phoneNumber: "5035551234"}));
 
-Describe: `AddressBook();`
+Describe: Contact.prototype.fullName();
+Test: "It will return the contact's first and last name as one string"
+Expect(Contact.prototype.fullName().toEqual("John Smith"));
+
+Describe: AddressBook();
 Test: "It will produce a prototype for proceeding objects to inherit from"
 Expect(new AddressBook().toEqual({contacts: {}, currentId: 0}));
 
-Describe: `AddressBook.prototype.assignId();`
+Describe: AddressBook.prototype.assignId();
 Test: "It will grab the current id from AddressBook and increase its value by one and return it"
 Expect(this.assignId().toEqual(1))
 
-Describe: `AddressBook.prototype.addContact();`
+Describe: AddressBook.prototype.addContact();
 Test: "It will grab the current id and index it into the AddressBook object"
 Expect(this.addContact().toEqual({}))
+
+Describe: AddressBook.prototype.findContact();
+Test: "It will check if the provided index exists, and if it does, it returns the Contact object; otherwise it returns false."
+Expect(AddressBook.prototype.findContact(1).toEqual({firstName: "John", lastName: "Smith", phoneNumber: "5035551234", id: 1}));
+
+Describe: AddressBook.prototype.deleteContact();
+Test: "It will check if the provided index exists, and if it does, it will delete the Contact object; otherwise it returns false."
+Expect(AddressBook.prototype.deleteContact(1).toEqual(null));
+
+
 
 ```
  
