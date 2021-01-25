@@ -39,7 +39,9 @@ Describe: AddressBook.prototype.deleteContact();
 Test: "It will check if the provided index exists, and if it does, it will delete the Contact object; otherwise it returns false."
 Expect(AddressBook.prototype.deleteContact(1).toEqual(null));
 
-
+Describe: $("form#new-contact").submit(function(event) {})
+Test: "It will grab the submit event from the form with the id new-contact and return its information"
+Expect($("form#new-contact").submit(function(event) {}).toEqual(Jquery.Event {originalEvent: MouseEvent, type: "click", target: "form#new-contact"...}));)
 
 ```
  
