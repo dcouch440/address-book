@@ -13,7 +13,7 @@ This app is designed to use showcase constructors and prototype methods to manip
 ```js
 
 ```
-
+ 
 * * *
 
 ## Technologies used
