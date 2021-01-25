@@ -50,10 +50,11 @@ function displayContactDetails(addressBookToDisplay) {
     const contact = addressBookToDisplay.findContact(key);
     htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
   });
-  return htmlForContactInfo
+  contactsList.html(htmlForContactInfo);
 }
 
 function showContact(contactId) {
+  console.log(contactId)
   const contact = addressBook.findContact(contactId);
   document.getElementById('show-contact').style.display = "initial"
   $(".first-name").html(contact.firstName);
@@ -63,6 +64,8 @@ function showContact(contactId) {
   buttons.empty();
   buttons.append("<button class='deleteButton' id=" + contact.id + ">Delete</button>");
 }
+
+
 
 function attachContactListeners() {
   const myUl = document.getElementById('contacts')
@@ -85,12 +88,9 @@ $(document).ready(function() {
     const inputtedLastName = $("input#new-last-name").val();
     const inputtedPhoneNumber = $("input#new-phone-number").val();
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
-
+    
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
-    console.log(displayContactDetails(addressBook));
+    displayContactDetails(addressBook);
   })
 })
