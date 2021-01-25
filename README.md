@@ -11,6 +11,10 @@ This app is designed to use showcase constructors and prototype methods to manip
 * * *
 ## Specs
 ```js
+Describe: `Contact();`
+Test: "It will produce a new contact object based on user-inputs: First Name, Last Name, Phone Number"
+Expect(Contact("John", "Smith", "5035551234").toEqual({firstName: "John", lastName: "Smith", phoneNumber: "5035551234"}));
+
 Describe: `AddressBook();`
 Test: "It will produce a prototype for proceeding objects to inherit from"
 Expect(new AddressBook().toEqual({contacts: {}, currentId: 0}));
@@ -21,7 +25,7 @@ Expect(this.assignId().toEqual(1))
 
 Describe: `AddressBook.prototype.addContact();`
 Test: "It will grab the current id and index it into the AddressBook object"
-Expect(this.addContact().toEqual())
+Expect(this.addContact().toEqual({}))
 
 ```
  
