@@ -13,7 +13,7 @@ This app is designed to use showcase constructors and prototype methods to manip
 ```js
 Describe: Contact();
 Test: "It will produce a new contact object based on user-inputs: First Name, Last Name, Phone Number"
-Expect(Contact("John", "Smith", "5035551234").toEqual({firstName: "John", lastName: "Smith", phoneNumber: "5035551234"}));
+Expect(new Contact("John", "Smith", "5035551234").toEqual({firstName: "John", lastName: "Smith", phoneNumber: "5035551234"}));
 
 Describe: Contact.prototype.fullName();
 Test: "It will return the contact's first and last name as one string"
