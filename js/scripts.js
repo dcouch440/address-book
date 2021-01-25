@@ -54,7 +54,6 @@ function displayContactDetails(addressBookToDisplay) {
 }
 
 function showContact(contactId) {
-  console.log(contactId)
   const contact = addressBook.findContact(contactId);
   document.getElementById('show-contact').style.display = "initial"
   $(".first-name").html(contact.firstName);
@@ -68,6 +67,7 @@ function showContact(contactId) {
 
 
 function attachContactListeners() {
+  // testing
   const myUl = document.getElementById('contacts')
   myUl.addEventListener("click", function(event) {
     showContact(event.target.id);
