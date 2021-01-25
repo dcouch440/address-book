@@ -43,6 +43,13 @@ Describe: $("form#new-contact").submit(function(event) {})
 Test: "It will grab the submit event from the form with the id new-contact and return its information"
 Expect($("form#new-contact").submit(function(event) {}).toEqual(Jquery.Event {originalEvent: MouseEvent, type: "click", target: "form#new-contact"...}));)
 
+Describe: displayContactDetails()
+Test: "It will take an AddressBook object and loop through its keys to display its values within a ul container"
+Expect(displayContactDetails({{{firstName: "John", lastName: "Smith", phoneNumber: "5035551234", id: 1}}, currentId: 1})).toEqual("<li id='1'>John Smith</li>")
+
+
+
+
 ```
  
 * * *
