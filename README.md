@@ -51,7 +51,9 @@ Describe: showContact()
 Test: "It will show our contact information in a div after setting its display setting to show"
 Expect(showContact(1).toEqual('firstName, lastName, phoneNumber, and delete button appear on page'))
 
-
+Describe: attachContactListeners()
+Test: "It will, on clicking a list element from the contacts list, display the first name, last name, and phone number in the show-contact space. Additionally, when the delete button is clicked, it will delete the selected element and hide the show-contact on click."
+Expect(attachContactListeners().toEqual("event listener successfully added to contacts and button"))
 
 ```
  
