@@ -53,5 +53,5 @@ $(document).ready(function() {
     addressBook.addContact(newContact);
   });
   const myAddress = new AddressBook()
-  console.log(myAddress)
+  console.log(myAddress.assignId())
 });
