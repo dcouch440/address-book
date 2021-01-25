@@ -50,7 +50,7 @@ function displayContactDetails(addressBookToDisplay) {
     const contact = addressBookToDisplay.findContact(key);
     htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
   });
-  contactsList.html(htmlForContactInfo);
+  return htmlForContactInfo
 }
 
 function showContact(contactId) {
@@ -91,6 +91,6 @@ $(document).ready(function() {
 
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
-    displayContactDetails(addressBook);
+    console.log(displayContactDetails(addressBook));
   })
 })

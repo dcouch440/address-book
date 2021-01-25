@@ -45,7 +45,7 @@ Expect($("form#new-contact").submit(function(event) {}).toEqual(Jquery.Event {or
 
 Describe: displayContactDetails()
 Test: "It will take an AddressBook object and loop through its keys to display its values within a ul container"
-Expect(displayContactDetails({{{firstName: "John", lastName: "Smith", phoneNumber: "5035551234", id: 1}}, currentId: 1})).toEqual("<li id='1'>John Smith</li>")
+Expect(displayContactDetails({{firstName: "John", lastName: "Smith", phoneNumber: "5035551234", id: 1}}, currentId: 1})).toEqual("<li id='1'>John Smith</li>")
 
 
 
