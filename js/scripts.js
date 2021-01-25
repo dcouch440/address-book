@@ -67,7 +67,6 @@ function showContact(contactId) {
 
 
 function attachContactListeners() {
-  // testing
   const myUl = document.getElementById('contacts')
   myUl.addEventListener("click", function(event) {
     showContact(event.target.id);
