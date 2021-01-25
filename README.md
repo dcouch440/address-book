@@ -29,7 +29,7 @@ Expect(this.assignId().toEqual(1))
 
 Describe: AddressBook.prototype.addContact();
 Test: "It will grab the current id and index it into the AddressBook object"
-Expect(this.addContact().toEqual({}))
+Expect(this.addContact({firstName: "John", lastName: "Smith", phoneNumber: "5035551234"}).toEqual({{{firstName: "John", lastName: "Smith", phoneNumber: "5035551234", id: 1}}, currentId: 1}))
 
 Describe: AddressBook.prototype.findContact();
 Test: "It will check if the provided index exists, and if it does, it returns the Contact object; otherwise it returns false."
