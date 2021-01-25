@@ -45,6 +45,7 @@ let addressBook = new AddressBook();
 
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
+    console.log(event)
     event.preventDefault();
     const inputtedFirstName = $("input#new-first-name").val();
     const inputtedLastName = $("input#new-last-name").val();
@@ -52,9 +53,6 @@ $(document).ready(function() {
     let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
     addressBook.addContact(newContact);
   });
-  let myContact = new Contact("John", "Smith", "5035551234")
-  addressBook.addContact(myContact)
-  console.log(addressBook.deleteContact(1))
-  console.log(addressBook)
+
 
 });
